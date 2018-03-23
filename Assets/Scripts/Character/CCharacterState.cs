@@ -14,7 +14,6 @@ public class CCharacterState : MonoBehaviour {
 
     public virtual void BeginState()
     {
-        Debug.Log(Manager.m_CurState);
     }
 
     public virtual void EndState()

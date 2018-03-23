@@ -13,5 +13,10 @@ public class CCharacterStateRun : CCharacterState
     {
         base.EndState();
     }
-    
+
+    private void Start()
+    {
+        Debug.Log("Run");
+    }
+
 }

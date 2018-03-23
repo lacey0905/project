@@ -6,7 +6,6 @@ public class CCharacterController : MonoBehaviour
 {
     Rigidbody m_RigidBody;
 
-    // 이동 방향
     Vector3 m_Direction = Vector3.zero;
 
     public float m_fSpeed = 5.0f;

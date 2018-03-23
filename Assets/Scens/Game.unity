@@ -376,7 +376,7 @@ Animator:
   m_GameObject: {fileID: 920245889}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4d2d0b189281a9e4f807bd5299a6e86b, type: 2}
+  m_Controller: {fileID: 9100000, guid: f153f8cabacac9a4f8088c9ce5f96609, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -880,6 +880,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StartState: 0
   m_CurState: 0
+  IsMove: 0
   m_CurDirection: {x: 0, y: 0}
 --- !u!114 &2133656805
 MonoBehaviour:
@@ -926,4 +927,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 920245891}
-  temp: {fileID: 1662675899}
