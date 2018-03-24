@@ -2,15 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CCharacterStateAttack : CCharacterState
+public class CStateRun : CStateBase
 {
+
     public override void BeginState()
     {
-        base.BeginState();
+        Debug.Log("Run");
     }
 
     public override void EndState()
     {
-        base.EndState();
+
+
     }
 }

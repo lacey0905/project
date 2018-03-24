@@ -2,15 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CCharacterStateIdle : CCharacterState
+public class CStateIdle : CStateBase
 {
+
     public override void BeginState()
     {
-        base.BeginState();
+
     }
 
     public override void EndState()
     {
-        base.EndState();
+
+
     }
 }

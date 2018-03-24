@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CCharacterState : MonoBehaviour {
+public class CStateBase : MonoBehaviour {
 
     protected CCharacterManager _manager;
     protected CCharacterManager Manager { get { return _manager; } }
@@ -12,12 +12,6 @@ public class CCharacterState : MonoBehaviour {
         _manager = GetComponent<CCharacterManager>();
     }
 
-    public virtual void BeginState()
-    {
-    }
-
-    public virtual void EndState()
-    {
-    }
-
+    public virtual void BeginState() { }
+    public virtual void EndState() { }
 }
