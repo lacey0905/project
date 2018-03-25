@@ -799,6 +799,7 @@ GameObject:
   - component: {fileID: 2133656801}
   - component: {fileID: 2133656800}
   - component: {fileID: 2133656805}
+  - component: {fileID: 2133656807}
   - component: {fileID: 2133656804}
   - component: {fileID: 2133656803}
   - component: {fileID: 2133656806}
@@ -887,7 +888,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_CurState: 0
-  IsMove: 0
+  m_Sprite: {fileID: 920245891}
   m_CurDirection: {x: 0, y: 0}
 --- !u!114 &2133656806
 MonoBehaviour:
@@ -900,3 +901,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1527e1f6b06712d4a9d710389c01a43a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_RunDirection: {x: 0, y: 0}
+--- !u!114 &2133656807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2133656799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45c4028657f046248b66c169af5798b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_fSpeed: 5

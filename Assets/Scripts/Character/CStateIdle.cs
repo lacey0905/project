@@ -13,6 +13,11 @@ public class CStateIdle : CStateBase
     public override void EndState()
     {
 
-
     }
+
+    public override void StateUpdate()
+    {
+        base.Manager.Animator.SetFloat("Move", 0.0f);
+    }
+
 }

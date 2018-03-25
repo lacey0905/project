@@ -14,4 +14,5 @@ public class CStateBase : MonoBehaviour {
 
     public virtual void BeginState() { }
     public virtual void EndState() { }
+    public virtual void StateUpdate() { }
 }
