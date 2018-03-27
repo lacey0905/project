@@ -304,7 +304,7 @@ GameObject:
   - component: {fileID: 920245891}
   - component: {fileID: 920245892}
   m_Layer: 0
-  m_Name: Sprite
+  m_Name: Render
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -798,11 +798,9 @@ GameObject:
   - component: {fileID: 2133656802}
   - component: {fileID: 2133656801}
   - component: {fileID: 2133656800}
-  - component: {fileID: 2133656805}
+  - component: {fileID: 2133656803}
   - component: {fileID: 2133656807}
   - component: {fileID: 2133656804}
-  - component: {fileID: 2133656803}
-  - component: {fileID: 2133656806}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -862,9 +860,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2133656799}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7e4c5f6baaf256498d995b108c3162f, type: 3}
+  m_Script: {fileID: 11500000, guid: f3d01c6a067b39b47bcbf84b79e3afcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CharacterStat:
+    m_MaxHP: 0
+    m_HP: 0
+  m_Direction: {x: 0, y: 0}
 --- !u!114 &2133656804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -873,35 +875,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2133656799}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54ac797eb609b5a4aa412ec34f9523c1, type: 3}
+  m_Script: {fileID: 11500000, guid: ed15a1366a1d8c44e9302c515a22691f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2133656805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2133656799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9caee1d2c2a10340b9a508169f5dcf9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_CurState: 0
-  m_Sprite: {fileID: 920245891}
-  m_CurDirection: {x: 0, y: 0}
---- !u!114 &2133656806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2133656799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1527e1f6b06712d4a9d710389c01a43a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_RunDirection: {x: 0, y: 0}
+  m_Render: {fileID: 0}
 --- !u!114 &2133656807
 MonoBehaviour:
   m_ObjectHideFlags: 0
