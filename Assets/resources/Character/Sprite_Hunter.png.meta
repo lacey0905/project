@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 859a2ad460c6fee47adbd99d500471d7
-timeCreated: 1522057591
+guid: f9230afe63429184cb7a398b295935cf
+timeCreated: 1522236359
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -37,6 +37,11 @@ TextureImporter:
     21300060: Sprite_Hunter_30
     21300062: Sprite_Hunter_31
     21300064: Sprite_Hunter_32
+    21300066: Sprite_Hunter_33
+    21300068: Sprite_Hunter_34
+    21300070: Sprite_Hunter_35
+    21300072: Sprite_Hunter_36
+    21300074: Sprite_Hunter_37
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -567,6 +572,76 @@ TextureImporter:
         serializedVersion: 2
         x: 1870
         y: 126
+        width: 170
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sprite_Hunter_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 170
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sprite_Hunter_34
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 0
+        width: 170
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sprite_Hunter_35
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 0
+        width: 170
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sprite_Hunter_36
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 0
+        width: 170
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sprite_Hunter_37
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 0
         width: 170
         height: 126
       alignment: 0

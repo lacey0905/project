@@ -12,10 +12,6 @@ public class CCharacterAnimation : MonoBehaviour
         m_Anim = GetComponent<Animator>();
     }
 
-    //public SetAnim()
-    //{
-
-    //}
 
 
     
