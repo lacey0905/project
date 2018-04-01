@@ -37,5 +37,5 @@ public class CCharacterBase : MonoBehaviour
             CharacterStat.m_HP = CharacterStat.m_MaxHP;
         }
     }
-
+    
 }
