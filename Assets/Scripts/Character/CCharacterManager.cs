@@ -1,25 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
-using System;
 
-public enum CharacterState 
-{ 
+public enum CharacterState
+{
     Standard = 0,
     BaseAttack,
 }
 
-public class CCharacterHunter : CCharacterBase
+public class CCharacterManager : CCharacterBase
 {
+
     CCharacterController m_Controller;
-    Dictionary<CharacterState, CCharacterState> DState = new Dictionary<CharacterState, CCharacterState>();
-    public List<CCharacterState> StateList = new List<CCharacterState>();
+    Dictionary<CharacterState, CCharacterManager> DState = new Dictionary<CharacterState, CCharacterManager>();
+    public List<CCharacterManager> StateList = new List<CCharacterManager>();
 
     public CharacterState CurState;
 
     [SerializeField]
     private Vector2 m_Direction = Vector2.zero;
+
+    public Vector3 Direction { get { return m_Direction; } }
 
     void Awake()
     {
@@ -34,6 +35,7 @@ public class CCharacterHunter : CCharacterBase
     void Start()
     {
         CurState = CharacterState.Standard;
+
     }
 
 
@@ -63,13 +65,12 @@ public class CCharacterHunter : CCharacterBase
 
             SetState(CharacterState.Standard);
 
-            //Standard.GetComponent<Animator>().SetFloat("Move", 1.0f);                  // 애니메이터 Move 블렌드 움직임 트리로 변경
-            //Standard.GetComponent<Animator>().SetFloat("DirY", m_Direction.y);         // 애니메이터 Y축 파라미터 변경
+
 
             // 좌우 방향키가 입력이 될 때만 스프라이트 반전
             if (m_Direction.x != 0)
             {
-                //m_Render.flipX = m_Direction.x < 0;
+                //DState[CurState].GetComponent<SpriteRenderer>().flipX = m_Direction.x < 0;
             }
         }
 
@@ -90,8 +91,6 @@ public class CCharacterHunter : CCharacterBase
 
     }
 
-    bool temp2 = false;
-
     // 방향키 받기
     private Vector2 GetInput()
     {
@@ -102,5 +101,4 @@ public class CCharacterHunter : CCharacterBase
         };
         return input;
     }
-
 }
