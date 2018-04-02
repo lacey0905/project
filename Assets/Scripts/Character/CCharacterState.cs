@@ -4,19 +4,25 @@ using UnityEngine;
 
 public class CCharacterState : MonoBehaviour
 {
-    protected CCharacterBase _manager;
-    protected CCharacterBase Manager { get { return _manager; } }
+    private CCharacterManager _manager;
+    protected CCharacterManager Manager { get { return _manager; } }
+
+    protected Animator Animator;
+    protected Collider Collider;
 
     private void Awake()
     {
-        _manager = GetComponent<CCharacterManager>();
+        Animator = GetComponent<Animator>();
+        Collider = GetComponent<Collider>();
+        GetComponent<SpriteRenderer>().enabled = true;
+    } 
+
+    public void Init(CCharacterManager _CharManager)
+    {
+        _manager = _CharManager;
     }
 
-    public virtual void BeginState()
-    {
-    }
-
-    public virtual void EndState()
-    {
-    }
+    public virtual void SetUpdate() { }
+    public virtual void BeginState() { }
+    public virtual void EndState() { }
 }
