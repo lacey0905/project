@@ -13,8 +13,6 @@ public class CStateBaseAttack : CCharacterState
 
     string[] BaseAttackArr = new string[] { "BaseAttackA", "BaseAttackB", "BaseAttackC" };
 
-    public List<ParticleSystem> EffectArr;
-
     public override void BeginState()
     {
         Manager.IsMove = false;
@@ -26,55 +24,15 @@ public class CStateBaseAttack : CCharacterState
     void OnTriggerEnter(Collider _col)
     {
         _col.GetComponent<Hit>().SetHit();
+        GetComponent<Collider>().enabled = false;
     }
-  
 
     void BaseAttack()
     {
         GetComponent<Collider>().enabled = true;
-
-        if (Manager.Direction.y < 0)
-        {
-            Animator.Play("BaseAttackDown", -1, 0);
-        }
-        else if (Manager.Direction.y > 0)
-        {
-            Animator.Play("BaseAttackUp", -1, 0);
-        }
-        else
-        {
-            Animator.Play(BaseAttackArr[Count], -1, 0);
-        }
-
-        if (Manager.Direction.x != 0)
-        {
-            if (Manager.Direction.x < 0)
-            {
-                EffectArr[Count].startRotation3D = new Vector3(0, 3.14f, 0);
-            }
-            else
-            {
-                EffectArr[Count].startRotation3D = new Vector3(0, 0, 0);
-            }
-        }
-
-        for (int i = 0; i < EffectArr.Count; i++)
-        {
-            if (i == Count)
-            {
-                EffectArr[i].gameObject.SetActive(true);
-            }
-            else
-            {
-                EffectArr[i].gameObject.SetActive(false);
-            }
-
-        }
-
+        Animator.Play(BaseAttackArr[Count], -1, 0);
         Count++;
-
         if (Count > 2) Count = 0;
-        
     }
 
     public override void SetUpdate()
@@ -88,6 +46,7 @@ public class CStateBaseAttack : CCharacterState
                 ResetTimer = 0f;
             }
         }
+
         ResetTimer += Time.deltaTime;
         Delay += Time.deltaTime;
 

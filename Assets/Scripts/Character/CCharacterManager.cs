@@ -10,18 +10,22 @@ public enum CharacterState
 
 public class CCharacterManager : CCharacterBase
 {
+    // 컨트롤러
     CCharacterController m_Controller;
+
+    // State 저장 
     Dictionary<CharacterState, CCharacterState> DState = new Dictionary<CharacterState, CCharacterState>();
 
-    public CCharacterState[] StateList;
+    public CCharacterState[] StateList;         // State 오브젝트 배열
 
-    public CharacterState CurState;
-    public CharacterState StartState;
+    public CharacterState CurState;             // 현재 오브젝트
+    public CharacterState StartState;           // 시작 오브젝트
 
     [SerializeField]
-    private Vector2 m_Direction = Vector2.zero;
-    public Vector2 Direction { set { m_Direction = value; }  get { return m_Direction; } }
+    private Vector2 m_Direction = Vector2.zero;                                                         // 키 입력 방향
+    public Vector2 Direction { set { m_Direction = value; }  get { return m_Direction; } }      // 키 입력 참조
 
+    // 이동 여부
     public bool _isMove = true;
     public bool IsMove { set { _isMove = value; } get { return _isMove; } }
 
@@ -29,17 +33,20 @@ public class CCharacterManager : CCharacterBase
     {
         m_Controller = GetComponent<CCharacterController>();
 
+        // State를 상속받는 하위 오브젝트를 모두 가져옴
         StateList = GetComponentsInChildren<CCharacterState>();
+
+        // 이넘 타입 키 값 가져옴
         CharacterState[] StateValue = (CharacterState[])System.Enum.GetValues(typeof(CharacterState));
 
         for (int i = 0; i < StateValue.Length; i++)
         {
-            DState.Add(StateValue[i], StateList[i]);
+            DState.Add(StateValue[i], StateList[i]);            // 템플릿에 넣음
 
-            StateList[i].Init(this);
+            StateList[i].Init(this);                                    // 가져온 게임 오브젝트 생성자 실행
 
-            if (StateValue[i] == StartState) continue;
-
+            // 시작 상태 빼고 모두 비활성화
+            if (StateValue[i] == StartState) continue;          
             StateList[i].gameObject.SetActive(false);
         }
     }
@@ -73,6 +80,6 @@ public class CCharacterManager : CCharacterBase
                 }
             }
         }
-        DState[CurState].SetUpdate();
+        DState[CurState].SetUpdate();           // 각 상태 오브젝트 업데이트 실행
     }
 }
