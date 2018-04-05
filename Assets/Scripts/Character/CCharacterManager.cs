@@ -64,6 +64,7 @@ public class CCharacterManager : CCharacterBase
 
     void FixedUpdate()
     {
+
         if (IsMove)
         {
             // 방향키 입력이 있으면 Move 상태로 전환
